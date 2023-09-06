@@ -1,3 +1,64 @@
+# Hello Laravel
+
+![Static Badge](https://img.shields.io/badge/PHP-v8.2.4-33CCFF)
+![Static Badge](https://img.shields.io/badge/Laravel-v9.*-3388FF)
+![Static Badge](https://img.shields.io/badge/Node.js-v18.17.1-338855)
+
+
+## 概要・目的
+
+家計簿をつけるwebアプリを目標としたプロジェクト．
+主な機能としては以下の通り
+
+- Todoリストの作成(使い方の勉強) -> 買い物リストに昇格するかも
+- レシート・クレカ明細をスマホ等で読み取り解析
+- 月ごとの利用額や買い物の種類を円グラフ、棒グラフで示す
+
+開発動機は，形に残る，スマホ(iphone)でも見れるもがいい．iOSの開発環境は環境がないのと，画像認識や授業で行ったこと復習も兼ねてpythonやC言語が使えるものを考えた結果，webアプリに至った．
+学習時間や開発の規模から，公開せずに，ローカルでの仕様を目的としている．
+
+## 使用技術
+
+- Windows 11/10
+- XAMPP for Windows 8.2.4
+- Laravel Framework 9.52.15
+- PHP 8.2.4
+- Apache/2.4.56
+- MySQL(MariaDB) 15.1
+- Node.js v18.17.1
+
+## ER図
+
+後日記載
+
+## 機能（設計仕様目標）
+
+- Todoリスト
+  - 予定の作成・編集 (買い物リストで使用可能)
+    - 個数も選択できるように拡張する必要あり
+    - フォルダで分類して管理 -> 項目のリストの中にタグとして持たせる
+  - ユーザ登録、ログイン機能 (使い方の勉強)
+    - パスワードの設定機能あり
+    - ユーザごとに項目を持たせられる
+  - 最終的にユーザ，タグ(商品の種類)などでソートできるとよい
+- レシートの読み取り
+  - webアプリにアップロードする形式
+  - 店舗，日付，商品名，値段，個数を抽出したい
+    - データベースに登録
+    - 人の目で編集可能なようにテキストフィール，ドロップダウンリストを設置
+  - クレカも似たようなもの．APIで取れたらそれ使うかも
+  - 方法はPythonかC++のOpenCVを使用
+- グラフの作成
+  - データベースから，Pythonのmatlabで作成予定
+    - 他にいいものがあれば変更する
+- UIはBootstrapで適当に見繕う予定
+
+### 補足
+
+Githubにデータベースを保存するのはよくないため，作業用TODOリストをファイルで作成し，webで更新できように変更するかも
+
+## 以下はLaravelで自動生成されたもの
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
