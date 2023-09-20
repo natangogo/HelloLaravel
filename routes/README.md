@@ -5,3 +5,11 @@
 3. また、ソース管理の「…」ボタンを押してチェックアウトを押すと選択画面に行くがそこで「master」ボタンを押す。
 4. 再度ソース管理の「…」ボタンから「マージブランチ」を選択し、「feature/test」を選択する。
 5. 最後に「pull」ボタンを押せば同期完了
+
+
+
+#確認作業
+1. タスクの一覧の確認方法
+$tasks = Tasks::where('folder_id', $current_folder->id)->get();
+は、以下のようにも書くことができる。
+$tasks = $current_folder->tasks()->get();
